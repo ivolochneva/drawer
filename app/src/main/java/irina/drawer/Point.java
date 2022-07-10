@@ -23,4 +23,11 @@ public class Point extends Figure {
     public float getSize() {
         return size;
     }
+
+    public boolean isCross(Point other) {
+        float a = x - other.x;
+        float b = y - other.y;
+        float c = (float) Math.sqrt(a * a + b * b);
+        return size + other.size > c;
+    }
 }

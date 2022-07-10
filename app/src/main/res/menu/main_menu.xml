@@ -13,4 +13,13 @@
         android:icon="@drawable/ic_baseline_line_weight_24"
         android:title="Select width"
         app:showAsAction="ifRoom|withText" />
+    <group android:checkableBehavior="single" >
+        <item
+            android:id="@+id/instrument_brush_menu"
+            android:checked="true"
+            android:title="Brush" />
+        <item
+            android:id="@+id/instrument_eraser_menu"
+            android:title="Eraser" />
+    </group>
 </menu>
