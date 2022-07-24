@@ -98,6 +98,17 @@ public class MainActivity extends AppCompatActivity {
                     })
                     .create()
                     .show();
+        } else if (item.getItemId() == R.id.select_background_menu) {
+                final ColorPickerView picker = new ColorPickerView(this);
+                picker.setColor(getView().getBackgroundColor());
+                new AlertDialog.Builder(this)
+                        .setTitle("Select background")
+                        .setView(picker)
+                        .setPositiveButton("Select", (dialog, which) -> {
+                            getView().setBackgroundColor(picker.getColor());
+                        })
+                        .create()
+                        .show();
         } else if (item.getItemId() == R.id.select_width_menu) {
             Slider slider = new Slider(this);
             slider.setValueFrom(2);
@@ -136,5 +147,9 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences pref = getPreferences(Context.MODE_PRIVATE);
         currentColor = pref.getInt(PREF_COLOR, Color.RED);
         currentWidth = pref.getFloat(PREF_WIDTH, 10);
+    }
+
+    private DrawerView getView() {
+        return findViewById(R.id.drawer);
     }
 }

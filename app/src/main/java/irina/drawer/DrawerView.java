@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.drawable.ColorDrawable;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -83,6 +84,10 @@ public class DrawerView extends View {
      */
     public int getColor() {
         return color;
+    }
+
+    public int getBackgroundColor() {
+        return ((ColorDrawable)getBackground()).getColor();
     }
 
 //    /**

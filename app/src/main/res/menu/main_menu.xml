@@ -6,14 +6,19 @@
         android:id="@+id/select_color_menu"
         android:icon="@drawable/ic_baseline_color_lens_24"
         android:title="Select color"
-        app:showAsAction="ifRoom|withText" />
+        app:showAsAction="always" />
 
+    <item
+        android:id="@+id/select_background_menu"
+        android:icon="@drawable/ic_baseline_filter_b_and_w_24"
+        android:title="Select background"
+        app:showAsAction="always" />
     <item
         android:id="@+id/select_width_menu"
         android:icon="@drawable/ic_baseline_line_weight_24"
         android:title="Select width"
-        app:showAsAction="ifRoom|withText" />
-    <group android:checkableBehavior="single" >
+        app:showAsAction="always" />
+    <group android:checkableBehavior="single">
         <item
             android:id="@+id/instrument_brush_menu"
             android:checked="true"
